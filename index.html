@@ -91,6 +91,30 @@ a.button {
 		margin: 48px 0;
 	}
 }
+
+  #overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+	cursor: pointer;
+  }
+  
+  #text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 50px;
+	color: white;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+  }
 </style>
 <script>
 function toggleDisplay(details) {
@@ -107,15 +131,15 @@ function toggleDisplay(details) {
 
 <div class="supercenter">
 	<h1>ICS Deconstruction's Site is Currently Unavailable</h1>
-	<h2>We apologize for the inconvenience. Please try again later.  :(</h2>
+	<h2>We apologize for the inconvenience.  :(</h2>
 	<p>This site may be temporarily down for maintenance.
 	Please check the URL for proper spelling and capitalization.
 	If you're having trouble locating a page, try visiting
 	<a href="https://www.churchofjesuschrist.org/?lang=eng">ChurchofJesusChrist.org</a>.</p>
 	<p id="buttons">
-		<a class="button" href="javascript:history.back()">Back</a>
+		<a class="button" button onclick="on()">click to show the mission</button>
+		<a class="button" href="javascript:history.back()">I'm Scared Go Back</a>
 		<a class="button" href="javascript:location.reload()">Reload</a>
-		<a class="button" href="https://www.churchofjesuschrist.org/feedback/?lang=eng&amp;body=Error%3ahttps%3A%2F%2Fd365.ldschurch.org%2F" aria-label="Leave Feedback">Leave Feedback</a>
 	</p>
 	<div id="details" style="display:none" class="error-block"><p>TEXT</p></div>
 	<div id="church-wordmark">
@@ -167,6 +191,22 @@ function toggleDisplay(details) {
 		</a>
 	</div>
 </div>
+
+<div id="overlay" onclick="off()">
+	<div id="text">The ICS Deconstruction Portfolio has deployed a new application in AWS. Unfortunately, they used EC2 instances with misconfigured roles and permissions, which are against architecture standards. A member reported that it looks like the Church is now hosting content for the infamous hacker Ramón in their AWS space. Can you retrace what Ramoné did to get in? Is there other sensitive data we should care about? And how can dectect this activity in the future?</div>
+  </div>
+  
+  <script>
+  function on() {
+	document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+	document.getElementById("overlay").style.display = "none";
+  }
+  </script>
+	 
+
 <div class="footer">
 	<p>&copy; 2021 Intellectual Reserve, Inc. All rights reserved.</p>
 </div>

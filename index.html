@@ -128,7 +128,7 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			font-size: 50px;
+			font-size: 20px;
 			color: white;
 			transform: translate(-50%, -50%);
 			-ms-transform: translate(-50%, -50%);
@@ -298,12 +298,36 @@
 	</div>
 
 	<div id="overlay" onclick="off()">
-		<div id="text">The ICS Deconstruction Portfolio has deployed a new application in AWS. Unfortunately, they used
-			EC2 instances with misconfigured roles and permissions, which are against architecture standards. A member
-			reported that it looks like the Church is now hosting content for the infamous hacker <em>Ramón</em> in
-			their AWS
-			space. Can you retrace what Ramoné did to get in? Is there other sensitive data we should care about? And
-			how could we detect/investigate this activity in the future?</div>
+		<div id="text">
+			<h2>Welcome to the MetaDataVerse Table Top!</h2>
+			<hr>
+			The ICS Deconstruction Portfolio has deployed a new application in AWS.<br>
+			Unfortunately, they used EC2 instances with misconfigured roles and permissions,<br>
+			which are against architecture standards.<br>
+			A member reported that it looks like the Church is now hosting content for the infamous hacker
+			<em>Ramón</em>
+			in their AWS space.
+			<hr> This table top requires you to act in several capacities (possibly simultaneously) outlined below:
+			<ul>
+				<li><strong>Incident Handler</strong>: <ul>
+						<li>Validate the Member's claim that Ramoné has in fact abused this site</li>
+						<li>Determine an appropriate scope for the incident (i.e., is there sensitive data at risk?)
+						</li>
+						<li>Formulate an effective remediation strategy and list TTP's for future detections</li>
+					</ul>
+				</li>
+				<li><strong>Attacker</strong>: <ul>
+						<li>Assume the role of an attacker to see if you can identify and validate the attack path used
+							by <em>Ramón</em> <code></code><em>Hint, there may be clues left by <em>Ramón</em> and dev
+								artifacts</em></code></li>
+						<li>This attack does <strong>NOT</strong> require exploits, privilege escalation, or
+							installation of tools</li>
+						<li>As a ethical attacker you are expected to stay within scope, which is limited to the IP
+							address you are provided.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
 
 	<script>
